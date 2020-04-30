@@ -1,0 +1,33 @@
+.product{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin: 0px 10px 0px 50px;
+    padding: 5px 0px 10px 0;
+}
+
+.product img{
+    margin-right: 20px;
+}
+
+.productName{
+    color: blue;
+    font-weight: 500;
+}
+.sellerName{
+color: gray;
+}
+.price{
+color: red;
+}
+.cartBtn{
+    background-color: goldenrod;
+    border: 1px solid gray;
+    height: 30px;
+    width: 150px
+}
+
+.cartBtn:hover{
+    background-color: gray;
+    border: 1px solid goldenrod;
+    color: #fff;
+}
