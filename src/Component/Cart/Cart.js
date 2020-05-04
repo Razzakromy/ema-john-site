@@ -10,11 +10,11 @@ const Cart = (props) => {
     total = total + product.price;
   }
   let shippingCost = 0;
-  if (total > 35) {
+  if (total >50) {
     shippingCost = 0;
-  } else if (total > 15) {
+  } else if (total > 35) {
     shippingCost = 5.99;
-  } else if (total > 5) {
+  } else if (total > 25) {
     shippingCost = 9.99;
   } else if (total > 0) {
     shippingCost = 12.99;
@@ -29,13 +29,14 @@ const Cart = (props) => {
   return (
     <div>
       <h1>Cart Item</h1>
-      <h3>Order Summary: {cart.length} Pcs</h3>
-      <h4 className="product-price">Product Price: {(total)} $</h4>
-      <p>
-        <small>Shipping Cost: {shippingCost}$</small>
+      <p>Order Summary: {cart.length} Pcs</p>
+      <h4 className="product-price">Product Price: {formatNumber(total)} $</h4>
+      <p className="shipping">
+        <small>Shipping Cost: {formatNumber(shippingCost)} $</small>
       </p>
-      <p><small>tax+VAT: {(tax)} $</small> </p>
-      <h2>Total Price: {formatNumber(total + shippingCost + tax)}$</h2>
+      <p className="taxVat">Tax+VAT: {formatNumber(tax)} $ </p>
+      <hr/>
+      <h3 className='totalPrice'>Total Price: {formatNumber(total + shippingCost + tax)}$</h3>
     </div>
   );
 };

@@ -15,10 +15,10 @@ const Product = (props) => {
       <div>
         <h4 className="productName">{name}</h4>
         <p className="sellerName">
-          <small>by: {seller}</small>
+          <small>Seller: {seller}</small>
         </p>
         <p className="price">$ {price}</p>
-        <p className="stock">only {stock} left in stock</p>
+        <p className="stock"> <small> only <span style={{color: 'red'}}>{stock}</span>  left in stock </small></p>
         <button className="cartBtn" onClick={()=>props.handleAddProduct(props.product)}>
           <FontAwesomeIcon icon={faShoppingCart} /> Add to cart
         </button>

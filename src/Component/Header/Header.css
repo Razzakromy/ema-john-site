@@ -1,24 +1,33 @@
-.header img{
+.header img {
     height: 100px;
 }
-.header{
+
+.header {
     text-align: center;
 }
-.header nav{
+
+.header nav {
     background-color: black;
     line-height: 33px;
-    font-size: 25px;  
+    font-size: 25px;
 }
 
-nav a{
+nav a {
     color: #fff;
     text-decoration: none;
-    margin-right: 38px; 
+    margin-right: 38px;
     padding: 0px 10px 0px 10px;
 }
 
-nav a:hover{
+nav a:hover {
     background-color: #fff;
     color: lightcoral;
 }
-
+.cartIcon {
+    margin-left: 60px;
+    padding-right: 14px;
+}
+.cartIcon:hover {
+    color: lightcoral;
+    background-color: darkorange;
+}
