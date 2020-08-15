@@ -1,16 +1,19 @@
 import React from "react";
 import "./Cart.css";
+// import { useAuth } from "../Login/useAuth";
 
 const Cart = (props) => {
   const cart = props.cart;
+  // const auth = useAuth();
+ 
   // const total = cart.reduce((total,prdcts) => total+prdcts.price,0)
   let total = 0;
   for (let i = 0; i < cart.length; i++) {
     const product = cart[i];
-    total = total + product.price;
+    total = total + product.price * product.quantity;
   }
   let shippingCost = 0;
-  if (total >50) {
+  if (total > 50) {
     shippingCost = 0;
   } else if (total > 35) {
     shippingCost = 5.99;
@@ -21,10 +24,10 @@ const Cart = (props) => {
   }
   let tax = total / 10;
 
-  const formatNumber = num => {
-      const format = num.toFixed(2);
-      return Number(format)
-  }
+  const formatNumber = (num) => {
+    const format = num.toFixed(2);
+    return Number(format);
+  };
 
   return (
     <div>
@@ -35,8 +38,11 @@ const Cart = (props) => {
         <small>Shipping Cost: {formatNumber(shippingCost)} $</small>
       </p>
       <p className="taxVat">Tax+VAT: {formatNumber(tax)} $ </p>
-      <hr/>
-      <h3 className='totalPrice'>Total Price: {formatNumber(total + shippingCost + tax)}$</h3>
+      <hr />
+      <h3 className="totalPrice">
+        Total Price: {formatNumber(total + shippingCost + tax)}$
+      </h3>
+      {props.children}
     </div>
   );
 };

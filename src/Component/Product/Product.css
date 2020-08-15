@@ -19,11 +19,11 @@ color: gray;
 .price{
 color: darkviolet;
 }
-.cartBtn{
+.cartBtn {
     background-color: goldenrod;
     border: 1px solid gray;
-    height: 30px;
-    width: 150px
+    height: 46px;
+    width: 251px;
 }
 
 .cartBtn:hover{

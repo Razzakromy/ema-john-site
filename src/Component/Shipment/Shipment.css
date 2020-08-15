@@ -1,0 +1,21 @@
+.ship-form{
+margin: 30px 200px;
+}
+
+.ship-form input{
+    display: block;
+    width: 250px;
+    margin-top:10px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.bi-credit-card-2-back-fill:hover{
+    color: lightsalmon;
+}
+
+.bi-alarm-fill:hover{
+    color: lightgreen;
+}
+

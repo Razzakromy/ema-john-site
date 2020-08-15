@@ -24,6 +24,8 @@
         "markdown"
     ],
     "emmet.includeLanguages": {
+    
     "javascript": "javascriptreact"
-    }
+    },
+    "editor.fontSize": 17
 }
